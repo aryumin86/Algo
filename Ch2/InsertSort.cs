@@ -24,5 +24,29 @@ namespace Ch2
 
             return arr;
         }
+
+        /// <summary>
+        /// Сортировка вставкой по убыванию. Упражнение 2.1.2.
+        /// </summary>
+        /// <returns>The desc.</returns>
+        /// <param name="arr">Arr.</param>
+        public static int[] SortDesc(int[] arr){
+			int key;
+			int i;
+
+            for (int j = 1; j < arr.Length; j++){
+                key = arr[j];
+                i = j - 1;
+                while(i > -1 && arr[i] < key){
+                    arr[i + 1] = arr[i];
+                    i--;
+                }
+                arr[i + 1] = key;
+            }
+
+            return arr;
+        }
     }
+
+
 }
