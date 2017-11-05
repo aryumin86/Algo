@@ -52,7 +52,7 @@ namespace Ch4
             int crossSum = 0;
 
             if (low + 1 == high)
-                return new int[] { low + 1, high, arr[low] };
+                return new int[] { low + 1, high, arr[low + 1] };
             else{
                 int mid = (low + high) / 2;
                 int[] left = FindMaximumSubArray(arr, low, mid);
